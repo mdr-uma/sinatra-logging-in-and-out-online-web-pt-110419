@@ -5,10 +5,10 @@ class Helpers
 
     def self.is_logged_in?(session)
       # !!current_user(session)
-        if @user = session[:user_id]
+        if session[:user_id]
             true
         else 
-            @user != session[:user_id]
+            !session[:user_id]
             false
         end
     end
